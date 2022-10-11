@@ -1,16 +1,16 @@
 import React from "react";
 
-const QuizLogo = ({ qItem }) => {
+const QuizLogo = ({qItem}) => {
   return (
-    <div className="px-4 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-4 justify-items-center py-20 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+    <div>
       <div>
-        <div className="card w-72 bg-base-100 shadow-xl">
+        <div className="card w-72 bg-base-100 shadow-xl shadow-black">
           <figure>
             <img src={qItem.logo} alt="Shoes" />
           </figure>
           <div className="card-body">
             <h2 className="card-title">{qItem.name}</h2>
-            <p>Total: {qItem.total}</p>
+            <p className="w-16">Total: {qItem.total}</p>
             <div className="card-actions justify-end">
               <button className="btn btn-primary">Quiz start</button>
             </div>
