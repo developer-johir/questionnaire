@@ -11,7 +11,7 @@ const QuizCard = () => {
       }
     return (
         <div>
-            <div>
+        <div>
         <div className="">
           <div className="card w-96 bg-gray-800 shadow-xl m-auto mt-8">
             <div className="card-body">
@@ -68,7 +68,7 @@ const QuizCard = () => {
           </div>
         </div>
       </div>
-        </div>
+    </div>
     );
 };
 
