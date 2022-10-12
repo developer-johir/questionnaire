@@ -1,23 +1,18 @@
-import React from "react";
-import { useLoaderData } from "react-router-dom";
-import QuizCard from "../QuizCard/QuizCard";
+import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import {EyeIcon } from '@heroicons/react/24/solid'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const Questions = () => {
-  const qItem = useLoaderData();
-  console.log(qItem.data);
-  return (
-    <div className="my-14">
-      <h2 className="text-3xl">
-        question of: <i className=" font-bold text-orange-500">{qItem.data.name}</i>{" "}
-        <span>({qItem.data.total})</span>
-      </h2>
-
-      <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-      <QuizCard></QuizCard>
-      </div>
-
-      {/* <div>
-        <div className="px-4 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+const QuizCard = () => {
+    const qItem = useLoaderData();
+    const tost = () => {
+        toast(`${qItem.data.questions[0].correctAnswer}`);
+      }
+    return (
+        <div>
+            <div>
+        <div className="">
           <div className="card w-96 bg-gray-800 shadow-xl m-auto mt-8">
             <div className="card-body">
 
@@ -72,10 +67,9 @@ const Questions = () => {
             </div>
           </div>
         </div>
-      </div> */}
-
-    </div>
-  );
+      </div>
+        </div>
+    );
 };
 
-export default Questions;
+export default QuizCard;
